@@ -1,0 +1,47 @@
+//colors
+$red: hsl(4, 100%, 67%);
+$blue-800: hsl(234, 29%, 20%);
+$blue-700: hsl(235, 18%, 26%);
+$grey: hsl(0, 0%, 58%);
+$white: hsl(0, 0%, 100%);
+//gradient
+$grad-start: hsl(354, 100%, 67%) 50%;
+$grad-end: hsl(18, 99%, 53%) 100%;
+$shadow: hsla(4, 100%, 67%, 0.7);
+$shadow-card: hsla(222, 47%, 11%, 0.45);
+
+//font weight
+$fw-400: 400;
+$fw-500: 500;
+$fw-700: 700;
+
+//font size
+$fs-sm: 13px;
+$fs-md: 15px;
+$fs-lrg: 24px;
+$fs-body: 16px;
+
+//paddings, margins and gaps
+$space-1: 1rem;
+$space-2: 2rem;
+$space-3: 3rem;
+$space-4: 4rem;
+$space-5: 5rem;
+
+//radius
+$rad-s: 8px;
+$rad-l: 24px;
+
+//width
+$w-s: 20%;
+$w-m: 40%;
+$w-l: 60%;
+$w-xl: 80%;
+$w-full: 100%;
+
+//height
+$vh-full: 100vh;
+$vh-s: 40vh;
+$vh-m: 80vh;
+$height-half: 50%;
+$height-full: 100%;

@@ -1,0 +1,53 @@
+@use "_variables" as *;
+
+//body-template
+@mixin body-template {
+  padding: 0;
+  margin: 0;
+  height: $height-full;
+  font-size: $fs-sm;
+  width: $w-full;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background: $blue-700;
+}
+
+//flex template
+@mixin flex-simple {
+  display: flex;
+}
+
+@mixin flex-full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//button template
+@mixin btn-template {
+  padding: $space-1;
+  margin-top: $space-1;
+  border-radius: $rad-s;
+  border: none;
+  cursor: pointer;
+  color: $white;
+  background: $blue-800;
+  font-weight: $fw-700;
+  &:hover {
+    background: linear-gradient(90deg, $grad-start, $grad-end);
+    box-shadow: 0 18px 40px $shadow;
+  }
+}
+
+//text templates
+@mixin h1-template {
+  color: $blue-800;
+  font-size: 3rem;
+  margin-bottom: $space-1;
+}
+
+@mixin p-template {
+  margin-bottom: $space-1;
+  color: $blue-800;
+  font-weight: $fw-400;
+}

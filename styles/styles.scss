@@ -1,0 +1,176 @@
+//
+@use "_mixins" as *;
+@use "_variables" as *;
+
+//body-template
+body {
+  min-height: 100vh;
+  @include body-template;
+  @include flex-full;
+  flex-direction: column;
+}
+// main content
+main {
+  @include flex-full;
+  flex-direction: column;
+  gap: $space-2;
+}
+// card
+.main-cont {
+  padding: $space-2;
+  width: $w-full;
+  @include flex-simple;
+  justify-content: center;
+
+  .subs-card {
+    max-width: 850px;
+    background: $white;
+    border-radius: $rad-l;
+    padding: $space-2;
+    display: flex;
+    gap: $space-2;
+    box-shadow: 0 24px 60px $shadow-card;
+
+    .inner-content {
+      flex: 1;
+      padding: $space-2 $space-3 0 $space-1;
+      display: flex;
+      //   justify-content: center;
+      flex-direction: column;
+
+      h1 {
+        @include h1-template;
+      }
+
+      p {
+        @include p-template;
+      }
+      //list
+      ul {
+        list-style: none;
+        margin-bottom: $space-2;
+        padding: 0;
+
+        li {
+          @include flex-simple;
+          gap: 1rem;
+          color: $blue-800;
+          font-weight: $fw-400;
+          margin-bottom: 0.7rem;
+
+          img {
+            width: 20px;
+            display: block;
+          }
+        }
+      }
+      //form
+      .email-form {
+        @include flex-simple;
+        flex-direction: column;
+
+        .label-row {
+          @include flex-simple;
+          justify-content: space-between;
+          align-items: center;
+          font-weight: $fw-700;
+          color: $blue-700;
+          margin-bottom: 0.5rem;
+          font-size: 14px;
+        }
+
+        .error-text {
+          color: $red;
+          display: none;
+        }
+
+        input {
+          border-radius: $rad-s;
+          border: 1px solid hsla(234, 29%, 20%, 0.5);
+          padding: $space-1;
+          cursor: pointer;
+
+          &::placeholder {
+            color: $grey;
+          }
+        }
+
+        button {
+          @include btn-template;
+        }
+
+        &.error {
+          .error-text {
+            display: inline;
+          }
+
+          input {
+            border-color: $red;
+            background-color: hsla(4, 100%, 67%, 0.12);
+            color: $red;
+
+            &::placeholder {
+              color: $red;
+            }
+          }
+        }
+      }
+    }
+
+    //image
+    .image-cont {
+      flex: 1;
+      position: relative;
+      @include flex-simple;
+      align-items: center;
+
+      img {
+        width: $w-full;
+        height: $height-full;
+        object-fit: cover;
+      }
+    }
+  }
+}
+//success section
+.success-card {
+  display: flex;
+  max-width: 300px;
+  background: $white;
+  border-radius: $rad-l;
+  padding: $space-3;
+  box-shadow: $shadow-card;
+  display: none;
+
+  .success-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  h1 {
+    @include h1-template;
+  }
+
+  p {
+    @include p-template;
+    .success-email {
+      font-weight: $fw-700;
+    }
+  }
+  .dismiss-btn {
+    width: $w-full;
+    @include btn-template;
+  }
+}
+
+//footer
+.attribution {
+  padding-top: $space-2;
+  text-align: center;
+  color: $white;
+
+  a {
+    text-decoration: none;
+    color: $red;
+  }
+}
