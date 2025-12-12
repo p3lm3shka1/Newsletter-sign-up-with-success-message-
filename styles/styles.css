@@ -263,7 +263,7 @@ main {
     width: 18px;
   }
   .main-cont .subs-card .inner-content .email-form input {
-    width: 90%;
+    width: auto;
   }
   .success-card {
     width: 100%;
